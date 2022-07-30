@@ -1,4 +1,4 @@
-package com.saniazt.test1;
+package com.saniazt.test;
 
 public class Test1 {
     public static void main(String[] args) {
