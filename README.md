@@ -24,4 +24,5 @@ java -cp . FirstClass
 
 ----
 *Создали первый файл First class. Дальше можно разбирать уроки и создавать новые packages в com.saniazt и называть их, например, com.saniazt.ver1*
-
+----
+*31.07 Проход курса 
