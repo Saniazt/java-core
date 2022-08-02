@@ -17,7 +17,16 @@ public class YtubeMY
             Scanner scanner1 = new Scanner(System.in);
             String name;
             name = scanner1.nextLine();
-        System.out.println("Nice to meet you, "+name);
+        System.out.println("Nice to meet you, "+name+". How old are you,"+name+"?");
+
+        Scanner scanner2 = new Scanner(System.in);
+        Integer age;
+        age = scanner2.nextInt();
+        if (age < 0)
+            System.out.println("Looks like you are so young!");
+        if (age >= 18)
+            System.out.println("Great age with great opportunities!");
+
 
 
 
