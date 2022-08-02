@@ -1,6 +1,5 @@
 package com.saniazt.test;
 
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class Ytube3 {
@@ -13,7 +12,7 @@ public class Ytube3 {
 
         isTrue = first == 51;
 
-        if (first>= second || isTrue){
+        if (first >= second || isTrue){
             System.out.println("Number is 10");
             System.out.println("\n");
         } else if (first ==45)
@@ -22,7 +21,7 @@ public class Ytube3 {
             System.out.println("Number is lower than " + second);
         }
         switch (first){
-            case 51:
+            case 31 :
                 System.out.println("Number is equal 51");
                 break;
             case 48:
