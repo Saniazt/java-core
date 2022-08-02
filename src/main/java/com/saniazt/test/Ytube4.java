@@ -28,6 +28,13 @@ public class Ytube4 {
 //            System.out.println(x);
 //        }while (x>50000);
 //
+        int j =0;
+        while (j<10){
+            j+=1;
+                    if(j%2 == 0)
+                        continue;
+            System.out.println(j);
+        }
 
 
         }
