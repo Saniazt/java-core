@@ -13,8 +13,8 @@ public class Ytube52 {
         n = in.nextInt();
         a = new int[n];
         for (int m = 0, m < n, m++) {
-            System.out.print("Enter a[" + i + "] = ");
-            a[i] - in.nextInt();
+            System.out.print("Enter a[" + m + "] = ");
+            a[m] - in.nextInt();
         }
 
         }
