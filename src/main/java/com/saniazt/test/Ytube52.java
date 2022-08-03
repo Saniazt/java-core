@@ -12,10 +12,13 @@ public class Ytube52 {
         System.out.println("Enter numbers of arrays: ");
         n = in.nextInt();
         a = new int[n];
-        for (int m = 0, m < n, m++) {
+        for (int m = 0; m < n; m++) {
             System.out.print("Enter a[" + m + "] = ");
-            a[m] - in.nextInt();
+            a[m] = in.nextInt();
         }
+        for (int m=0; m<n; m++);
+        System.out.println();
+
 
         }
     }
