@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class myself {
     public static void main(String[] args) {
 
-
+        System.out.println("Enter first number please: ");
 
 
         Scanner num1 = new Scanner(System.in);
         double m;
 
             do {
-                System.out.println("Enter first number please: ");
+                System.out.println("Cannot be over 100");
                 m = num1.nextDouble();
                 if (m < 100)
                     System.out.println("OKEY, давай второе число:");
