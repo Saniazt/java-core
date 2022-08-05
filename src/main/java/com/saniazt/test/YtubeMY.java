@@ -45,9 +45,11 @@ public class YtubeMY
         System.out.println("Perfect, "+name+" Enter your second number:");
         second = num.nextDouble();
         if (first > second)
-            System.out.println("Great!"+first+">"+second);
+//            System.out.println("Great!"+first+">"+second);
+            System.out.println("Итак, давай поделим твои цифры, это будет: " +first/second);
         else
-            System.out.print("bad luck");
+            System.out.print("bad luck, lets try again, please second<first:)");
+
 
 
 
