@@ -7,6 +7,9 @@ public class Proba2 {
         int d = new Proba().c;
         System.out.println(d);
 
+        System.out.println(new Proba().f);
+
+        System.out.println(new Proba().g);
 
        //  Proba.say("George");так выводим если добавить static в Proba
         new Proba().say("George"); // так без static
