@@ -2,8 +2,7 @@ package com.saniazt.proba01;
 
 public class Proba2 {
     public static void main(String[] args) {
-      int n = new Proba().summm;
-        System.out.println(n);
+        System.out.println(new Proba().summm);
 
         int d = new Proba().c;
         System.out.println(d);
