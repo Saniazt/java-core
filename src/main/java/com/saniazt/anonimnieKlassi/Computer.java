@@ -9,5 +9,6 @@ public class Computer {
 //                this.transfer.start();
 //            }
         };
+        // в анонимный классах обязательно точка с запятом в конце
     }
 }
