@@ -15,5 +15,9 @@ public class Main {
         Math z = new Math();
        int j = z.mult(12,12);
         System.out.println(j);
+        ///
+        Math v = new Math();
+        int zx = v.dilenya(12,6);
+        System.out.println(zx);
     }
 }
