@@ -6,4 +6,7 @@ group = 'com.saniazt'
 version = '0.0.1'
 sourceCompatibility = '17'
 
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
 
