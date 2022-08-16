@@ -11,7 +11,7 @@ public class Birds {
     }
 
     public void walk(){
-        System.out.println("Ho-ho-ho");
+        System.out.println("Ho-ho-ho "+name+" "+wings);
     }
 
     public String getName() {

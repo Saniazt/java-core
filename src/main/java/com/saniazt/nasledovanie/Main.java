@@ -8,6 +8,10 @@ public class Main {
     ostrich.setName("Ostrich");
 
     Birds ostrich2 = new Ostrich("Vtoroi","Vtorogo");
+    ostrich2.walk();
 
+    Crow crow1 = new Crow("vorona","Krulya");
+    crow1.fly();
+    crow1.walk();
     }
 }
