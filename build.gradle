@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'idea'
+    id 'com.diffplug.spotless' version '6.9.1'
 }
 
 group = 'com.saniazt'
@@ -9,4 +11,15 @@ sourceCompatibility = '17'
 compileJava.options.encoding = 'UTF-8'
 compileTestJava.options.encoding = 'UTF-8'
 
+repositories {
+    mavenCentral()
+}
 
+spotless {
+    java {
+        googleJavaFormat()
+    }
+}
+
+compileJava.dependsOn 'spotlessApply'
+check.dependsOn 'spotlessApply'

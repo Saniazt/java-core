@@ -1,5 +1,5 @@
 package com.saniazt.abstracionClasses;
 
 public abstract class Shape {
-   abstract public void draw();
+  public abstract void draw();
 }

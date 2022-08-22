@@ -1,7 +1,7 @@
 package com.saniazt.abstracionClasses;
 
 public class Circle extends Shape {
-    public void draw(){
-        System.out.println("Circle");
-    }
+  public void draw() {
+    System.out.println("Circle");
+  }
 }

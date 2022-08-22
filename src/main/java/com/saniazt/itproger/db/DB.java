@@ -1,5 +1,3 @@
 package com.saniazt.itproger.db;
 
-public class DB {
-
-}
+public class DB {}
