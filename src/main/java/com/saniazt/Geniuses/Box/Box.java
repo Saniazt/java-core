@@ -6,6 +6,9 @@ public class Box {
   private double height;
   private double width;
 
+  public Box() {}
+  ;
+
   public Box(double weight, double height, double width) {
     this.weight = weight;
     this.height = height;
@@ -72,5 +75,11 @@ public class Box {
 
   Box increase(int i) {
     return new Box(weight * i, width * i, height * i);
+  }
+
+  public void showInfo() {
+    System.out.println(width);
+    System.out.println(height);
+    System.out.println(weight);
   }
 }

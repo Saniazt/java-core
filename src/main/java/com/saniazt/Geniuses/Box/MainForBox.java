@@ -19,5 +19,13 @@ public class MainForBox {
         System.out.println("Boxed are equal");
         break;
     }
+    System.out.println("----------------------------");
+    Box box3 = new Box();
+    box3.setDimens(12, 2, 4);
+    box3.showInfo();
+    System.out.println("----------------------------");
+    BoxForMobile box4 = new BoxForMobile();
+    box4.setDimens(3, 4, 1, 5);
+    box4.showInfo();
   }
 }
