@@ -21,5 +21,4 @@ public class BoxForMobile extends Box {
     super.setDimens(height, weight, width);
     this.count = count;
   }
-
 }
