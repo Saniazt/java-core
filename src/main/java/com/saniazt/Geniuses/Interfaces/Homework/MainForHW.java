@@ -15,5 +15,9 @@ public class MainForHW {
     for (Worker worker : workers) {
       worker.voice();
     }
+    System.out.println("--------");
+    System.out.print(misha.getName());
+    System.out.print(". And " + misha.getName() + " is ");
+    misha.canWork();
   }
 }

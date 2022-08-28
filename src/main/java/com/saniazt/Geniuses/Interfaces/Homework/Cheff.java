@@ -1,12 +1,12 @@
 package com.saniazt.Geniuses.Interfaces.Homework;
 
-public class Cheff extends Worker implements Can_cook {
+public class Cheff extends Worker implements CanWork {
   public Cheff(String name) {
     super(name);
   }
 
   @Override
-  public void canCook() {
-    System.out.println("Can cook");
+  public void canWork() {
+    System.out.println("Im cooking now");
   }
 }
