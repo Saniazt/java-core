@@ -82,4 +82,10 @@ public class Box {
     System.out.println(height);
     System.out.println(weight);
   }
+
+  @Override
+  public String toString() {
+    String result = String.format("Weight: %s\nHeight: %s\nWidth: %s", weight, height, width);
+    return result;
+  }
 }

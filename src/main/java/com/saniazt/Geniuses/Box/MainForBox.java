@@ -27,5 +27,14 @@ public class MainForBox {
     BoxForMobile box4 = new BoxForMobile();
     box4.setDimens(3, 4, 1, 5);
     box4.showInfo();
+    System.out.println(box3);
+    double random = Math.random();
+    random *= 6;
+    int randomInt = (int) random;
+    randomInt++;
+    int result1 = (int) (Math.random() * 6 + 1);
+    System.out.println(random);
+    System.out.println(randomInt);
+    System.out.println(result1);
   }
 }
