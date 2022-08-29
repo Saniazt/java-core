@@ -36,5 +36,7 @@ public class MainForBox {
     System.out.println(random);
     System.out.println(randomInt);
     System.out.println(result1);
+    int result3 = (int) (10 + Math.random() * 100);
+    System.out.println(result3);
   }
 }
