@@ -25,5 +25,12 @@ public class Main {
     for (double doubles1 : doubles) {
       System.out.println(doubles1);
     }
+
+    Object a1 = new Abricos();
+    Abricos a2 = (Abricos) a1;
+    a2.cost();
+    Object g2 = new Apple();
+    Abricos a3 = null;
+    if (g2 instanceof Abricos) a3 = (Abricos) g2;
   }
 }
