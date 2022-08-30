@@ -33,4 +33,8 @@ public class Dog {
     public static int counter = 0;
     public static int id = 0;
   }
+
+  public void gav() {
+    System.out.println(name + " SAYS GAV-GAV!!!!!");
+  }
 }
