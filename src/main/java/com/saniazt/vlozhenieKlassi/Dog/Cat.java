@@ -1,8 +1,7 @@
 package com.saniazt.vlozhenieKlassi.Dog;
 
 public class Cat {
-  private
-  String name;
+  private String name;
   private int age;
 
   public Cat(String name, int age) {
@@ -32,5 +31,4 @@ public class Cat {
       System.out.println(name + "OLD");
     } else System.out.println(name + "is in good condition");
   }
-
 }

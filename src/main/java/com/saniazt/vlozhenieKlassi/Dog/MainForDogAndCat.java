@@ -12,6 +12,8 @@ public class MainForDogAndCat {
     olivia.eat();
     olivia.sravnenie();
     olivia.setAge(11);
+    olivia.setName("Grisha");
+    olivia.meow("8fsdkfjsdf");
     olivia.sravnenie();
     olivia.eat();
     olivia.meow("Hello");
