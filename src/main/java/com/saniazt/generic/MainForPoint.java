@@ -18,7 +18,7 @@ public class MainForPoint {
     // для обобщенного метода:
     Short ar[] = {1, 2, 3, 4};
     Short val = 4;
-    boolean flIn = MathForGeneric.isIn(val, ar);
+    boolean flIn = Math.isIn(val, ar);
     System.out.println(flIn);
 
     // для обобщенного констуруктора:
