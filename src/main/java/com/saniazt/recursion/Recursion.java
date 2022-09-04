@@ -15,7 +15,6 @@ public class Recursion {
     return m * factorial(m - 1);
   }
 
-
   public static int factorial1(int x) {
     if (x == 0) return 1;
     System.out.println("x = " + x);
