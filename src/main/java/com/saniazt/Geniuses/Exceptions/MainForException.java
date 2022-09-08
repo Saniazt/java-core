@@ -2,7 +2,7 @@ package com.saniazt.Geniuses.Exceptions;
 
 public class MainForException {
   public static void main(String[] args) {
-    int a = 1;
+    int a = 0;
     try {
       int b = 7 / a;
     } catch (ArithmeticException e1) {

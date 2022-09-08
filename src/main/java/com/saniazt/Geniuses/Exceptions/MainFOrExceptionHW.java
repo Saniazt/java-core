@@ -10,5 +10,9 @@ public class MainFOrExceptionHW {
     } finally {
       System.out.println("Okey, we done this!");
     }
+    int n = 0;
+    for (int i = 0; i < inet.length; i++) {
+      System.out.println(inet[i]);
+    }
   }
 }
