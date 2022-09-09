@@ -4,8 +4,7 @@ import java.io.*;
 
 public class WriteObject { // В этом классе будем записывать обьекты
   public static void main(String[] args) {
-    Person person1 = new Person(1, "Bob");
-    Person person2 = new Person(2, "Mike");
+    Person[] people = {new Person(1, "Bob"), new Person(2, "Mike"), new Person(3, "Tom")};
     String separetor = File.separator;
     String path =
         separetor
@@ -30,8 +29,11 @@ public class WriteObject { // В этом классе будем записыв
     try {
       FileOutputStream fos = new FileOutputStream(file);
       ObjectOutputStream oos = new ObjectOutputStream(fos);
-      oos.writeObject(person1);
-      oos.writeObject(person2);
+      //      oos.writeInt(people.length); // для поочередного записывания
+      //      for (Person person : people) {
+      //        oos.writeObject(person);
+      //      }
+      oos.writeObject(people);
       oos.close();
     } catch (IOException e) {
       throw new RuntimeException(e);
