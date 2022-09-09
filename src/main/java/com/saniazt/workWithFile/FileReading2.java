@@ -1,4 +1,4 @@
-package com.saniazt.fileReading;
+package com.saniazt.workWithFile;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,10 +1,10 @@
-package com.saniazt.fileReading;
+package com.saniazt.workWithFile;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.PrintWriter;
 
-public class FileReading1 {
+public class WriteToFile {
   public static void main(String[] args) throws FileNotFoundException {
     String separetor = File.separator;
     String path =
@@ -24,14 +24,14 @@ public class FileReading1 {
             + "java_files"
             + separetor
             + separetor
-            + "test.txt"
+            + "testFile.txt"
             + separetor;
     File file = new File(path);
+    PrintWriter pw = new PrintWriter(file);
 
-    Scanner scanner = new Scanner(file);
-    while (scanner.hasNextLine()) {
-      System.out.println(scanner.nextLine());
-    }
-    scanner.close();
+    pw.println("Hello");
+    pw.println("Test row 2");
+
+    pw.close();
   }
 }
