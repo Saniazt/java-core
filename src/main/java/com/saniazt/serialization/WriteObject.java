@@ -7,6 +7,9 @@ public class WriteObject { // В этом классе будем записыв
     Person[] people = {
       new Person(1, "Bob", 177.6), new Person(2, "Mike", 198.7), new Person(3, "Tom", 981.9)
     };
+    int x = 10;
+    int y = 5;
+    int[] number = {x, y};
     String separetor = File.separator;
     String path =
         separetor
@@ -34,6 +37,7 @@ public class WriteObject { // В этом классе будем записыв
       //        oos.writeObject(person);
       //      }
       oos.writeObject(people);
+      oos.writeObject(number);
     } catch (IOException e) {
       throw new RuntimeException(e);
     }

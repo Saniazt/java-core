@@ -26,8 +26,8 @@ public class ReadObject { // В этом классе будем считыва�
             + "people.bin"
             + separetor;
     File file = new File(path);
-    try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
 
+    try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
       //      int personCount = ois.readInt(); // для поочередного считывания
       //      Person[] people = new Person[personCount];
       //      for (int i = 0; i < personCount; i++) {
@@ -35,6 +35,8 @@ public class ReadObject { // В этом классе будем считыва�
       //      }
       Person[] people = (Person[]) ois.readObject();
       System.out.println(Arrays.toString(people));
+      int[] number = (int[]) ois.readObject();
+      System.out.println(Arrays.toString(number));
     } catch (IOException | ClassNotFoundException e) {
       throw new RuntimeException(e);
     }
