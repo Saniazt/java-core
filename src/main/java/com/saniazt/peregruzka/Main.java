@@ -6,7 +6,7 @@ public class Main {
   }
 
   public static int summ(int a, int b, int g) {
-    return a + b + g;
+    return a + b * g;
   }
 
   public static void main(String[] args) {
