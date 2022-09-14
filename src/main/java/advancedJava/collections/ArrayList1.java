@@ -1,7 +1,6 @@
 package advancedJava.collections;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class ArrayList1 {
@@ -17,7 +16,6 @@ public class ArrayList1 {
     /*  for (Integer integer : list) {
       System.out.println(integer);
     }*/
-
 
   }
 }
