@@ -18,6 +18,7 @@ public class HashcodeAndEquals {
 
     System.out.println(map);
     System.out.println(set);
+    System.out.println(person1.equals(person2));
   }
 }
 
