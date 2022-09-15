@@ -67,7 +67,7 @@ class Person2 implements Comparable<Person2> {
   }
 
   @Override
-  public int compareTo(Person2 o) { //чем меньше имя - тем меньше обьект
+  public int compareTo(Person2 o) { // чем меньше имя - тем меньше обьект
     if (this.name.length() > o.getName().length()) return 1;
     else if (this.name.length() < o.getName().length()) return -1;
     else return 0;
