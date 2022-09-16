@@ -26,7 +26,7 @@ public class Queue1 {
     queueBlockingArray.offer(personForQueue4);
     queueBlockingArray.offer(personForQueue3); // этот уже не влезет
 
-   /* for (PersonForQueue persons123 : queueBlockingArray) {
+    /* for (PersonForQueue persons123 : queueBlockingArray) {
       System.out.println(persons123);
     }*/
 
