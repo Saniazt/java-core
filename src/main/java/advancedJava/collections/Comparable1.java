@@ -15,7 +15,7 @@ public class Comparable1 {
     System.out.println(person2Set);
   }
 
-  private static void addElements(Collection collection) {
+  private static void addElements(Collection<Person2> collection) {
     collection.add(new Person2(3, "Katy"));
     collection.add(new Person2(1, "Bob"));
     collection.add(new Person2(4, "George"));
