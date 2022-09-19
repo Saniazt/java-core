@@ -12,7 +12,6 @@ public class MultithreadingStartInfo {
     Thread thread = new Thread(new Runner());
     thread.start();
     System.out.println("Hello from Main Thread");
-
   }
 }
 
