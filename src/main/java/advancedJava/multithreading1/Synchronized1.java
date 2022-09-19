@@ -11,6 +11,7 @@ public class Synchronized1 {
   public synchronized void increment() {
     counter++;
   }
+
   public void doWork() throws InterruptedException {
     Thread thread1 =
         new Thread(
