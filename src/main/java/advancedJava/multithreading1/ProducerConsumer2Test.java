@@ -39,7 +39,6 @@ public class ProducerConsumer2Test {
 
     thread1.join();
     thread2.join();
-
   }
 
   public static void produce() throws InterruptedException {
