@@ -1,6 +1,7 @@
 package com.saniazt.test;
 
 import java.util.*;
+import java.util.function.BiFunction;
 
 public class codeWars1 {
   public static String longest(String s1, String s2) {
@@ -53,6 +54,11 @@ public class codeWars1 {
     return Integer.parseInt(String.valueOf(sb));
   }
 
+  public static int returnDouble(int n) {
+    var a = 2;
+    return n * a;
+  }
+
   public static void main(String[] args) throws InterruptedException {
     longest("gsdgsdg", "jkfyuxi");
     final int f = 5;
@@ -91,5 +97,7 @@ public class codeWars1 {
     squareSum(n);
     System.out.println(findSmallestInt(n));
     System.out.println(squareDigits(62781));
+    BiFunction<String, String, Integer> fun = (var g, var t) -> g.length() + t.length();
+    System.out.println(fun.apply("Java", "Java"));
   }
 }
