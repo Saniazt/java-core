@@ -2,6 +2,9 @@ package com.saniazt.test;
 
 import java.util.*;
 import java.util.function.BiFunction;
+import java.util.function.IntBinaryOperator;
+import java.util.function.ToIntFunction;
+import java.util.stream.Stream;
 
 public class codeWars1 {
   public static String longest(String s1, String s2) {
@@ -58,6 +61,53 @@ public class codeWars1 {
     var a = 2;
     return n * a;
   }
+  public static String highAndLow(String numbers) {
+    int [] arr1 = Arrays.stream(numbers.split(" ")).mapToInt(Integer::parseInt).toArray();
+    int a1 = Arrays.stream(arr1).min().getAsInt();
+    int a2 =Arrays.stream(arr1).max().getAsInt();
+    return a2+" "+a1;
+  }
+
+
+  public static int findShort(String s) {
+  return Arrays.stream(s.split(" ")).min((o1, o2) -> {
+    if (o1.length() > o2.length()) return 1;
+    if (o1.length() < o2.length()) return -1;
+    else return 0;
+  }).get().length();
+  }
+
+  public static int grow(int[] x){
+    return Arrays.stream(x).reduce((new IntBinaryOperator() {
+      @Override
+      public int applyAsInt(int left, int right) {
+        return left*right;
+      }
+    })).getAsInt();
+  }
+
+
+  public int Liters(double time)  {
+
+    double d = (time/0.5);
+    return  ((int) d);
+  }
+
+
+  public static String  disemvowel(String str) {
+    String [] arr2 = {"a", "e", "i", "o", "u","A","E","I","O","U"};
+    int y = arr2.length;
+    for (String s : arr2) {
+      {
+        if (str.contains(s))
+          str = str.replaceAll(s, "");
+      }
+    }
+  return str;
+   }
+
+
+
 
   public static void main(String[] args) throws InterruptedException {
     longest("gsdgsdg", "jkfyuxi");
