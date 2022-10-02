@@ -3,6 +3,8 @@ package com.saniazt.test;
 import java.util.*;
 import java.util.function.BiFunction;
 import java.util.function.IntBinaryOperator;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class codeWars1 {
   public static String longest(String s1, String s2) {
@@ -115,13 +117,62 @@ public class codeWars1 {
   public static int cockroachSpeed(double x) {
     return (int) x;
   }
+
   public static boolean setAlarm(boolean employed, boolean vacation) {
     return employed && !vacation;
   }
-  public static double find_average(int[] array){
-    if(array.length == 0) return 0;
-    return Arrays.stream(array).average().getAsDouble();
 
+  public static double find_average(int[] array) {
+    if (array.length == 0) return 0;
+    return Arrays.stream(array).average().getAsDouble();
+  }
+
+  //   Stream<String>stream = Arrays.stream(pin.split("")).filter((Predicate<String>) s -> {
+  //     int[] number = new int[]{1,2,3,4,5,6,7,8,9,0};
+  //     for(int i=0;i<pin.length();i++){
+  //       if(Integer.parseInt(s) == number[i]) return true;
+  //       else return false;
+  //   };
+  // }
+
+  //    String[] arr4 = Arrays.stream(pin.split("")).toArray();
+  //    for (int i = 0; i < pin.length(); i++)
+  //      if (arr4[i].contains("A-Za-z")) return false;
+  //      else if (arr4.length == 4) return true;
+  //    return true;
+
+  public static List<Object> filterList(final List<Object> list) {
+    // return list.stream().filter(o -> !o.toString().contains("[A-Za-z+]")).toList();
+    return list.stream().filter(a -> a instanceof Integer).collect(Collectors.toList());
+  }
+
+  public static int sortDesc(final int num) {
+    String[] arr = numberToString(num).split("");
+    int[] arr2 = Arrays.stream(arr).mapToInt(Integer::parseInt).sorted().toArray();
+    return 1;
+  }
+
+  public static boolean getXO(String str) {
+    String[] arr1 = str.split("");
+    int y = 0;
+    int x = 0;
+    for (int i = 0; i < arr1.length; i++) {
+      if (arr1[i].equals("o") || arr1[i].equals("O")) x = x + 1;
+      if (arr1[i].equals("x") || arr1[i].equals("X")) y = y + 1;
+    }
+    System.out.println(x + "and" + y);
+    if (x == y)  return true;
+    else return false;
+  }
+
+  public static int stringToNumber(String str) {
+    return Integer.parseInt(str);
+  }
+
+  public static boolean isLove(final int flower1, final int flower2) {
+   if(flower1%2 == 0 && !(flower2%2==0)) return true;
+   else if (flower2%2 == 0&&!(flower1%2==0)) return true;
+   else return false;
   }
 
   public static void main(String[] args) throws InterruptedException {
@@ -165,5 +216,6 @@ public class codeWars1 {
     BiFunction<String, String, Integer> fun = (var g, var t) -> g.length() + t.length();
     System.out.println(fun.apply("Java", "Java"));
     System.out.println(cockroachSpeed(5));
+    getXO("xxx23424esdsfvxXXOOooo");
   }
 }
