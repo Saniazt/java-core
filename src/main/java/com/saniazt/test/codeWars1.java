@@ -4,7 +4,6 @@ import java.util.*;
 import java.util.function.BiFunction;
 import java.util.function.IntBinaryOperator;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class codeWars1 {
   public static String longest(String s1, String s2) {
@@ -161,7 +160,7 @@ public class codeWars1 {
       if (arr1[i].equals("x") || arr1[i].equals("X")) y = y + 1;
     }
     System.out.println(x + "and" + y);
-    if (x == y)  return true;
+    if (x == y) return true;
     else return false;
   }
 
@@ -170,9 +169,29 @@ public class codeWars1 {
   }
 
   public static boolean isLove(final int flower1, final int flower2) {
-   if(flower1%2 == 0 && !(flower2%2==0)) return true;
-   else if (flower2%2 == 0&&!(flower1%2==0)) return true;
-   else return false;
+    if (flower1 % 2 == 0 && !(flower2 % 2 == 0)) return true;
+    else if (flower2 % 2 == 0 && !(flower1 % 2 == 0)) return true;
+    else return false;
+  }
+
+  public static int[] arrayDiff(int[] a, int[] b) {
+    List<Integer> list1 = new ArrayList<>(Arrays.stream(a).boxed().toList());
+    List<Integer> list2 = Arrays.stream(b).boxed().toList();
+    list1.removeAll(list2);
+    return list1.stream().mapToInt(e -> e).toArray();
+  }
+
+  public static int sum(int[] arr) {
+    return Arrays.stream(arr).filter(v -> v > 0).sum();
+  }
+
+  public static String[] towerBuilder(int nFloors) {
+    String[] tower = new String[nFloors];
+    for (int i = 0; i < nFloors; i++)
+      tower[i] = " ".repeat(nFloors - i - 1) + "*".repeat(i * 2 + 1) + " ".repeat(nFloors - i - 1);
+    List<String> list = Arrays.asList(tower);
+    list.stream().forEach(System.out::println);
+    return tower;
   }
 
   public static void main(String[] args) throws InterruptedException {
@@ -217,5 +236,9 @@ public class codeWars1 {
     System.out.println(fun.apply("Java", "Java"));
     System.out.println(cockroachSpeed(5));
     getXO("xxx23424esdsfvxXXOOooo");
+    int[] m = new int[] {1, 2, 4, 6};
+    int[] p = new int[] {1, 5, 9};
+    arrayDiff(m, p);
+    towerBuilder(10);
   }
 }
