@@ -2,6 +2,7 @@ package com.saniazt.test;
 
 import java.util.*;
 import java.util.function.BiFunction;
+import java.util.function.Function;
 import java.util.function.IntBinaryOperator;
 import java.util.stream.Collectors;
 
@@ -194,6 +195,36 @@ public class codeWars1 {
     return tower;
   }
 
+  public static Map<Integer, String> toMApKV(List<Integer> list) {
+    return list.stream()
+        .collect(Collectors.toMap(Function.identity(), a -> (a % 2 == 0) ? "even" : "odd"));
+  }
+
+  public static int findIt(int[] a) {
+    //    List<Integer> list = Arrays.stream(a).boxed().toList();
+    //    int [] arr1  = list.stream().sorted().distinct().mapToInt(x-> x).toArray();
+    //    for(int i=0;i<arr1.length;i++){
+    //      if(arr1 [i] == )
+    //    }
+    //    return
+    int xor = 0;
+    for (int i : a) {
+      xor = xor ^ i;
+    }
+
+    return xor;
+  }
+
+  public static int[] countBy(int x, int n) {
+    int[] xi = new int[n];
+    for (int i = 0; i < xi.length; i++) {
+      xi[i] = x;
+      x = x + xi[0];
+    }
+    System.out.println(Arrays.toString(xi));
+    return xi;
+  }
+
   public static void main(String[] args) throws InterruptedException {
     longest("gsdgsdg", "jkfyuxi");
     final int f = 5;
@@ -237,8 +268,9 @@ public class codeWars1 {
     System.out.println(cockroachSpeed(5));
     getXO("xxx23424esdsfvxXXOOooo");
     int[] m = new int[] {1, 2, 4, 6};
-    int[] p = new int[] {1, 5, 9};
+    int[] p = new int[] {1, 5};
     arrayDiff(m, p);
     towerBuilder(10);
+    countBy(5, 6);
   }
 }
