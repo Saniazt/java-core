@@ -201,12 +201,6 @@ public class codeWars1 {
   }
 
   public static int findIt(int[] a) {
-    //    List<Integer> list = Arrays.stream(a).boxed().toList();
-    //    int [] arr1  = list.stream().sorted().distinct().mapToInt(x-> x).toArray();
-    //    for(int i=0;i<arr1.length;i++){
-    //      if(arr1 [i] == )
-    //    }
-    //    return
     int xor = 0;
     for (int i : a) {
       xor = xor ^ i;
@@ -224,6 +218,33 @@ public class codeWars1 {
     System.out.println(Arrays.toString(xi));
     return xi;
   }
+
+  public static int[] deleteNth(int[] elements, int maxOccurrences) {
+    HashMap<Integer, Integer> map = new HashMap<>();
+    return Arrays.stream(elements)
+        .filter(
+            i -> {
+              map.merge(i, 1, Integer::sum);
+              return map.get(i) <= maxOccurrences;
+            })
+        .toArray();
+  }
+
+  public static int persistence(long n) {
+    int result = 0;
+    while (n > 9) {
+      long multi = 1;
+      for (char t : String.valueOf(n).toCharArray()) {
+        multi *= Long.parseLong(String.valueOf(t));
+      }
+      n = multi;
+      result++;
+    }
+    return result;
+  }
+
+
+
 
   public static void main(String[] args) throws InterruptedException {
     longest("gsdgsdg", "jkfyuxi");
@@ -267,10 +288,12 @@ public class codeWars1 {
     System.out.println(fun.apply("Java", "Java"));
     System.out.println(cockroachSpeed(5));
     getXO("xxx23424esdsfvxXXOOooo");
-    int[] m = new int[] {1, 2, 4, 6};
+    int[] m = new int[] {1, 2, 4, 2, 2, 4, 6, 2};
     int[] p = new int[] {1, 5};
     arrayDiff(m, p);
     towerBuilder(10);
     countBy(5, 6);
+    System.out.println(Arrays.toString(deleteNth(m, 3)));
+    System.out.println(persistence(147));
   }
 }
