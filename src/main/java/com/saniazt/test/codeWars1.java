@@ -243,8 +243,27 @@ public class codeWars1 {
     return result;
   }
 
+  public static char getGrade(int s1, int s2, int s3) {
+    var y = (s1 + s2 + s3) / 3;
+    if (y < 60) return 'F';
+    if (y >= 60 && y < 70) return 'D';
+    if (y >= 70 && y < 80) return 'C';
+    if (y >= 80 && y < 90) return 'B';
+    if (y >= 90 && y <= 100) return 'A';
+    else return 'H';
+  }
 
-
+  public static String accum(String s) {
+    List<String> strings = Arrays.stream(s.split("")).toList();
+    strings = strings.stream().map(String::toUpperCase).collect(Collectors.toList());
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < s.length(); i++) {
+      sb.append(strings.get(i).toUpperCase())
+          .append(strings.get(i).toLowerCase().repeat(i))
+          .append("-");
+    }
+    return sb.toString().substring(0, sb.length() - 1);
+  }
 
   public static void main(String[] args) throws InterruptedException {
     longest("gsdgsdg", "jkfyuxi");
@@ -291,9 +310,10 @@ public class codeWars1 {
     int[] m = new int[] {1, 2, 4, 2, 2, 4, 6, 2};
     int[] p = new int[] {1, 5};
     arrayDiff(m, p);
-    towerBuilder(10);
+    towerBuilder(40);
     countBy(5, 6);
     System.out.println(Arrays.toString(deleteNth(m, 3)));
     System.out.println(persistence(147));
+    System.out.println(accum("MlkhaoPO"));
   }
 }
