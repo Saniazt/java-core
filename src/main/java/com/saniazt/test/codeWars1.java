@@ -265,6 +265,38 @@ public class codeWars1 {
     return sb.toString().substring(0, sb.length() - 1);
   }
 
+  public static String camelCase(String input) {
+    char[] strings = input.toCharArray();
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < input.length(); i++) {
+      if (Character.isUpperCase(strings[i])) {
+        sb.append(" ");
+      }
+      sb.append(strings[i]);
+    }
+    return sb.toString();
+  }
+
+  private static int getNum(String s) {
+    for (int i = 0; i < s.length(); i++) {
+      if (Character.isDigit(s.charAt(i))) {
+        return Character.getNumericValue(s.charAt(i));
+      }
+    }
+    return 0;
+  }
+  public static String order(String words) {
+    if (words.equals("")) {
+      return "";
+    }
+    String[] arr = words.split(" ");
+    String[] temp = new String[arr.length];
+    for (int i = 0; i < arr.length; i++) {
+      temp[getNum(arr[i]) - 1] = arr[i];
+    }
+    return String.join(" ", temp);
+  }
+
   public static void main(String[] args) throws InterruptedException {
     longest("gsdgsdg", "jkfyuxi");
     final int f = 5;
@@ -315,5 +347,7 @@ public class codeWars1 {
     System.out.println(Arrays.toString(deleteNth(m, 3)));
     System.out.println(persistence(147));
     System.out.println(accum("MlkhaoPO"));
+    System.out.println(camelCase("camelCasing"));
+    System.out.println(order("is2 Thi1s T4est 3a"));
   }
 }
