@@ -29,4 +29,9 @@ public class PersonForRefl {
   public void setName(String name) {
     this.name = name;
   }
+
+  @Override
+  public String toString() {
+    return "PersonForRefl{" + "id=" + id + ", name='" + name + '\'' + '}';
+  }
 }
