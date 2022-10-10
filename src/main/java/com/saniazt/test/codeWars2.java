@@ -1,10 +1,25 @@
 package com.saniazt.test;
 
+import com.saniazt.interfaces.Array;
+
+import java.util.Arrays;
+
 public class codeWars2 {
   public static long findNextSquare(long sq) {
 
     long chislo = (long) Math.sqrt(sq);
     return chislo * chislo == sq ? (chislo + 1) * (chislo + 1) : -1;
+  }
+
+  public static int[] twoSum(int[] numbers, int target) {
+    int[] result = new int[2];
+    for (int i = 0; i < numbers.length; i++) {
+      for (int i1 = 0; i < numbers.length; i--) {
+        if (target - numbers[i] == numbers[i1]) {
+
+        }
+      }
+    } return result;
   }
 
   public static int rentalCarCost(int d) {
