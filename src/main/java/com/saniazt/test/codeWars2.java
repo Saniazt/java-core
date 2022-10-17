@@ -22,6 +22,11 @@ public class codeWars2 {
     } return result;
   }
 
+  public static boolean isTriangle(int a, int b, int c){
+    if(a<b+c && a>0&&b==c) return true;
+    else return false;
+  }
+
   public static int rentalCarCost(int d) {
     int h = 0;
     if (d < 7) return h = d * 40;
